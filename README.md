@@ -2,36 +2,39 @@
 
 Swastik College - BSC CSIT, 6th Semester Workshop on Content Management System using PHP &amp; MySQL.
 
-## Subject : Webtech
-
+#### Subject : Webtech
 #### Workshop - On CMS & Simple Informative Website
-
 #### Date : 31st December, 2017
 #### Time: 7:00 AM - 10:30 AM
 
+## Purpose
+To demonstrate and practise the client and server side web development knowledge learnt in the class.
+
 ## Requirements/Features
 
-## A content management system where:
+### Admin/Backend
+#### Login
 - Forgot password
 - Login to admin 
 
-## User
+### User Management
 - Add/edit/delete/suspend admin user
 - Change password
 - Edit own profile (name, photo)
 
-## Pages
+### Page Management
 - Add, Edit and Delete Contents (Pages)
 
-## Blog Management
--- Manage (add/edit/delete) Categories
--- Manage blog posts
+### Blog Management
+- Manage (add/edit/delete) Categories
+- Manage blog posts
 
-## Photo Gallery
--- Add/edit/delete albums
--- Add/delete photos to/from albums
+### Photo Gallery
+- Add/edit/delete albums
+- Add/delete photos to/from albums
 
-## Settings/Configuration (for application wise configurable values)
+### Settings/Configuration (
+- A configuration/settings section for managing (add/edit/delete) application wise configurable values
 
 ## Frontend Website
 - Homepage
@@ -40,8 +43,8 @@ Swastik College - BSC CSIT, 6th Semester Workshop on Content Management System u
 - Contact Us Form
 - Send email to admin upon submission
 
-# Database :
-## roles
+## Database :
+### roles
 ```sql
 create table roles (
 	id int(11) not null auto_increment primary key,
@@ -49,7 +52,7 @@ create table roles (
 	status smallint(4) not null default '1'
 );
 ```
-## users
+### users
 ```sql
 create table users (
 	id int(11) not null auto_increment primary key,
@@ -65,7 +68,7 @@ create table users (
 );
 ```
 
-## pages
+### pages
 ```sql
 create table pages (
 	id int(11) not null auto_increment primary key,
@@ -81,7 +84,7 @@ create table pages (
 );
 ```
 
-## albums
+### albums
 ```sql
 create table albums (
 	id int(11) not null auto_increment primary key,
@@ -91,7 +94,7 @@ create table albums (
 );
 ```
 
-## photos
+### photos
 ```sql
 create table photos (
 	id int(11) not null auto_increment primary key,
@@ -102,7 +105,7 @@ create table photos (
 );
 ```
 
-## categories
+### categories
 ```sql
 create table categories (
 	id int(11) not null auto_increment primary key,
@@ -112,7 +115,7 @@ create table categories (
 );
 ```
 
-## posts
+### posts
 ```sql
 create table posts (
 	id int(11) not null auto_increment primary key,
@@ -130,7 +133,7 @@ create table posts (
 );
 ```
 
-## configurations
+### configurations
 ```sql
 create table configurations (
 	id int(11) not null auto_increment primary key,
