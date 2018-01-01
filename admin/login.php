@@ -1,3 +1,8 @@
+<?php
+include dirname(__FILE__) . "/../lib/database.php";
+
+include dirname(__FILE__) . "/actions/loginprocess.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,16 +35,29 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <?php if(isset($_GET['msg'])) {?>
+            <div class="alert alert-error">
+              <?php echo $_GET['msg']; ?>
+            </div>
+            <?php } ?>
+
+            <?php if(isset($_GET['success'])) {?>
+            <div class="alert alert-success">
+              <?php echo $_GET['success']; ?>
+            </div>
+            <?php } ?>
+            <form method="post" action="">
               <h1>Login Form</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input name="username" type="text" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input name="password" type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.php">Log in</a>
+
+                <input type="submit" class="btn btn-default submit" name="btnsubmit" value="Log In">
+
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 

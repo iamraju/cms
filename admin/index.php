@@ -1,3 +1,11 @@
+<?php
+include dirname(__FILE__) . "/../lib/database.php";
+
+if(!checkLogin()){
+  header("Location: login.php?msg=Please login.");
+  die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +56,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <h2><?php echo $_SESSION['full_name']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -116,7 +124,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
+                    <img src="images/img.jpg" alt=""><?php echo $_SESSION['full_name']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
